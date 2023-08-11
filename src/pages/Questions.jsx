@@ -38,8 +38,7 @@ export const Questions = () => {
   const { response, loading } = useAxios({ url: apiUrl})
   const [questionIndex, setQuestionIndex] = useState(0)
   const [options, setOptions] = useState([]);
-  console.log(options)
-
+  
   useEffect(() => {
     if(response?.results.length){
       const question = response.results[questionIndex];
